@@ -1,13 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppConfigService } from './app-config.service';
 import { ConfigModule } from '@nestjs/config';
-import { AppConfigController } from './app-config.controller';
-import Joi from 'joi';
+import * as Joi from 'joi';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, 
+      isGlobal: true,
       validationSchema: Joi.object({
         APP_PORT: Joi.number().default(3000),
         DB_HOST: Joi.string().required(),
@@ -16,10 +15,10 @@ import Joi from 'joi';
         DB_PASSWORD: Joi.string().required(),
         DB_NAME: Joi.string().required(),
         JWT_SECRET: Joi.string().required(),
-      })
-    })
-  ], 
-  controllers: [AppConfigController],
+      }),
+    }),
+  ],
   providers: [AppConfigService],
+  exports: [AppConfigService],
 })
 export class AppConfigModule {}
