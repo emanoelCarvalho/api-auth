@@ -26,7 +26,7 @@ export class AppConfigService {
   }
 
   get getDbName(): string {
-    return this.config.get<string>('DB_NAME');
+    return this.config.get<string>('DB_DATABASE');
   }
 
   get getJwtSecret(): string {
