@@ -45,4 +45,8 @@ export class UsersService {
   private async getSaltRounds(): Promise<number> {
     return this.configService.getSaltRounds;
   }
+
+  async findByEmail(email: string): Promise<User> {
+    return this.repository.findOne({where: {email}});
+  }
 }
