@@ -10,20 +10,6 @@ import { DatabaseModule } from './database/database.module';
 @Module({
   imports: [
     AppConfigModule,
-    TypeOrmModule.forRootAsync({
-      imports: [AppConfigModule],
-      useFactory: async (configService: AppConfigService ) => ({
-        type: 'postgres', 
-        host: configService.getDbHost, 
-        port: configService.getDbPort, 
-        username: configService.getDbUsername,
-        password: configService.getDbPassword, 
-        database: configService.getDbName,
-        entities: [__dirname + '/**/*.entity{.ts,.js}'],
-        synchronize: true,
-      }), 
-      inject: [AppConfigService]
-    }),
     UsersModule,
     AuthModule,
     DatabaseModule,
