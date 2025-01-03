@@ -1,6 +1,3 @@
-Claro! Vou melhorar o **README.md** principal, referenciando corretamente os links dos arquivos `.md` adicionais, como o **TECNOLOGIAS.md** e **USAR_API.md**. Assim, o documento ficará mais organizado e com links que direcionam para os arquivos de instruções detalhadas.
-
-Aqui está a versão aprimorada do seu **README.md**:
 
 ---
 
