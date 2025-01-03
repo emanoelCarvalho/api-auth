@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateAuthDto } from './dto/create-auth.dto';
 import { JwtAuthGuard } from './jwt-auth.guard';
+import { any } from 'joi';
 
 @Controller('auth')
 export class AuthController {
@@ -18,4 +19,4 @@ export class AuthController {
     const message = 'You have successfully accessed the protected route';
     return { message };
   }
- }
+}
