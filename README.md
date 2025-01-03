@@ -96,9 +96,3 @@ Caso tenha dúvidas ou queira discutir mais sobre o projeto, fique à vontade pa
 - E-mail: [hemanoel718@gmail.com](mailto:hemanoel718@gmail.com)
 
 ---
-
-### Resumo
-
-Agora, este **README.md** principal oferece uma visão geral do projeto, com links para os arquivos adicionais que detalham as tecnologias e os passos necessários para rodar a aplicação e testar a API. A estrutura ficou mais organizada, e o fluxo de execução da aplicação foi melhor explicado, incluindo a utilização do **Docker** e as dependências necessárias.
-
-Se precisar de mais ajustes ou quiser adicionar mais informações, estou à disposição!
