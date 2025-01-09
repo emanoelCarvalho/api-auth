@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppConfigModule } from 'src/app-config/app-config.module';
 import { AppConfigService } from 'src/app-config/app-config.service';
+import { User } from 'src/users/entities/user.entity';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { AppConfigService } from 'src/app-config/app-config.service';
         username: configService.getDbUsername,
         password: configService.getDbPassword,
         database: configService.getDbName,
-        entities: [__dirname + '/**/*.entity{.ts,.js}'],
+        entities: [User],
         synchronize: true,
       }),
       inject: [AppConfigService],
