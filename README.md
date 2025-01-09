@@ -80,6 +80,12 @@ Siga os passos abaixo para rodar a aplicação em seu ambiente local:
 
 Para testar os endpoints da API, você pode usar ferramentas como **Insomnia**, **Postman** ou **cURL**. Para obter mais detalhes sobre os **endpoints** disponíveis, consulte o arquivo [index.md](./docs/index.md), que descreve como fazer as requisições e quais dados são necessários para cada endpoint.
 
+## **Licença**
+
+Este projeto é licenciado sob a Licença MIT. Isso significa que você pode usá-lo, modificá-lo e distribuí-lo livremente, desde que mantenha o aviso de copyright e a licença.
+
+Para mais detalhes, consulte o arquivo `LICENSE` no repositório.
+
 ## Contribuições
 
 Sinta-se à vontade para contribuir com este projeto. Se você encontrar melhorias ou bugs, ou se tiver ideias para novas funcionalidades, crie uma **issue** ou envie um **pull request**.
