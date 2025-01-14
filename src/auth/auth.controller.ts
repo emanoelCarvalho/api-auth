@@ -1,8 +1,7 @@
 import { Controller, Get, Post, Body, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { CreateAuthDto } from './dto/create-auth.dto';
+import { AuthSignInDto } from './dto/auth-signin.dto';
 import { JwtAuthGuard } from './jwt-auth.guard';
-import { any } from 'joi';
 import { ApiBearerAuth, ApiBody, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 @Controller('auth')
@@ -22,8 +21,8 @@ export class AuthController {
   })
   @ApiResponse({ status: 201, description: 'Login realizado com sucesso.' })
   @ApiResponse({ status: 401, description: 'Credenciais inválidas.' })
-  singIn(@Body() createAuthDto: CreateAuthDto) {
-    return this.authService.signIn(createAuthDto.email, createAuthDto.password);
+  singIn(@Body() AuthSignInDto: AuthSignInDto) {
+    return this.authService.signIn(AuthSignInDto.email, AuthSignInDto.password);
   }
 
   @Get('profile')
@@ -39,7 +38,7 @@ export class AuthController {
     },
   })
   @ApiResponse({ status: 401, description: 'Não autorizado.' })
-  getProfile(@Body() createAuthDto: CreateAuthDto) {
+  getProfile(@Body() AuthSignInDto: AuthSignInDto) {
     const message = 'You have successfully accessed the protected route';
     return { message };
   }
