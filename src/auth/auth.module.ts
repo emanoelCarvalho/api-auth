@@ -10,20 +10,20 @@ import { JwtStrategy } from './jwt.strategy';
 
 @Module({
   imports: [
-    UsersModule, 
-    PassportModule, 
-    AppConfigModule, 
+    UsersModule,
+    PassportModule,
+    AppConfigModule,
     JwtModule.registerAsync({
-      imports: [AppConfigModule], 
+      imports: [AppConfigModule],
       useFactory: async (configService: AppConfigService) => ({
         secret: configService.getJwtSecret,
-        signOptions: { expiresIn: '60s' }
-      }), 
-      inject: [AppConfigService]
-    })
+        signOptions: { expiresIn: '60s' },
+      }),
+      inject: [AppConfigService],
+    }),
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
-  exports: [JwtStrategy]
+  exports: [JwtStrategy],
 })
 export class AuthModule {}

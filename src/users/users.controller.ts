@@ -18,7 +18,7 @@ export class UsersController {
         id: 1,
         name: 'João da Silva',
         email: 'usuario@exemplo.com',
-        password: 'senha_do_usuario'
+        password: 'senha_do_usuario',
       },
     },
   })

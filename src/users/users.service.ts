@@ -13,23 +13,23 @@ export class UsersService {
     private readonly repository: Repository<User>,
     private readonly configService: AppConfigService,
   ) {}
-  
+
   async create(createUserDto: CreateUserDto): Promise<User> {
     await this.validateEmail(createUserDto.email);
     const hashedPassword = await this.hashPassword(createUserDto.password);
 
     const user = this.repository.create({
-      ...createUserDto, 
-      password: hashedPassword
-    })
+      ...createUserDto,
+      password: hashedPassword,
+    });
 
     const newUser = await this.repository.save(user);
-    delete newUser.password; 
+    delete newUser.password;
     return newUser;
   }
 
   private async validateEmail(email: string): Promise<void> {
-    const user = await this.repository.findOne({where: {email}});
+    const user = await this.repository.findOne({ where: { email } });
 
     if (user) {
       throw new Error('Email already in use');
@@ -47,6 +47,6 @@ export class UsersService {
   }
 
   async findByEmail(email: string): Promise<User> {
-    return this.repository.findOne({where: {email}});
+    return this.repository.findOne({ where: { email } });
   }
 }
