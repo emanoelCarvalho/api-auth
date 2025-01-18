@@ -6,7 +6,7 @@ import { AppConfigModule } from 'src/config/app-config/app-config.module';
 import { JwtModule } from '@nestjs/jwt';
 import { AppConfigService } from 'src/config/app-config/app-config.service';
 import { PassportModule } from '@nestjs/passport';
-import { JwtStrategy } from './jwt.strategy';
+import { JwtStrategy } from './strategy/jwt.strategy';
 
 @Module({
   imports: [
