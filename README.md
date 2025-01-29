@@ -3,7 +3,7 @@
 
 # API de Autenticação
 
-Este repositório contém uma API básica de autenticação de usuários, desenvolvida com o objetivo de compreender e aprimorar conceitos relacionados ao desenvolvimento backend, especialmente na parte de autenticação e segurança de usuários.
+Este repositório contém uma API autenticação de usuários, desenvolvida com o objetivo de compreender e aprimorar conceitos relacionados ao desenvolvimento backend, especialmente na parte de autenticação e segurança de usuários.
 
 ## Funcionalidades
 
